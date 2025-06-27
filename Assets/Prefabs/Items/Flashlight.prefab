@@ -128,8 +128,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6851769fa6b554f7d8a91ef9a6b7d29d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flickOnStart: 1
   minIntensity: 48
   flickerSpeed: 0.1
+  flickerDuration: 1
 --- !u!1 &3009484225711874632
 GameObject:
   m_ObjectHideFlags: 0
