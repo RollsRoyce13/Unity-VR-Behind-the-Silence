@@ -14,8 +14,7 @@ GameObject:
   - component: {fileID: -6105005989860976833}
   - component: {fileID: 1385322349999160688}
   - component: {fileID: 1925449794832056116}
-  - component: {fileID: 6020515349299572147}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Book_B_Red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -268,16 +267,3 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
---- !u!135 &6020515349299572147
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1535171795492828988}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.15
-  m_Center: {x: 0.0034397058, y: 0.00036501698, z: 2.2364861e-10}

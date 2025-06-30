@@ -1,11 +1,16 @@
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Game
 {
     [RequireComponent(typeof(Light))]
     public class LightFlicker : MonoBehaviour
     {
+        [Header("Events")]
+        [SerializeField] private UnityEvent onActivate;
+        [SerializeField] private UnityEvent onDeactivate;
+        
         [Header("Settings")] 
         [SerializeField] private bool flickOnStart;
         [SerializeField, Min(0f)] private float minIntensity = 0.5f;
@@ -15,6 +20,16 @@ namespace Game
         private Light _flashlight;
 
         private Tween _tween;
+        
+        private void OnDisable()
+        {
+            onDeactivate?.Invoke();
+        }
+
+        public void OnEnable()
+        {
+            onActivate?.Invoke();
+        }
 
         private void Awake()
         {

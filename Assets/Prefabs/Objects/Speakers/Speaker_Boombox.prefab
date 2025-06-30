@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2981140394240341599}
   - component: {fileID: 180852720720888527}
   - component: {fileID: 8323239508725196744}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Boombox_Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138,10 +138,9 @@ GameObject:
   - component: {fileID: 6154863819796615362}
   - component: {fileID: 576245521262024732}
   - component: {fileID: 510263227}
-  - component: {fileID: 2146242399425425433}
   - component: {fileID: 1430857418687385577}
   - component: {fileID: 2299785908231135813}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Speaker_Boombox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -323,19 +322,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!135 &2146242399425425433
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5650474337536192791}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.2
-  m_Center: {x: -0.003844507, y: 0.09367554, z: 0.0071670786}
 --- !u!54 &1430857418687385577
 Rigidbody:
   m_ObjectHideFlags: 0

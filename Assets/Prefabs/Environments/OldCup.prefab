@@ -14,8 +14,7 @@ GameObject:
   - component: {fileID: 4395000821153128829}
   - component: {fileID: 8199217696588620909}
   - component: {fileID: 1574426760424954428}
-  - component: {fileID: 5415031335605571430}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: OldCup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -268,16 +267,3 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
---- !u!135 &5415031335605571430
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 183806}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.25
-  m_Center: {x: 0.03837774, y: -0.00075660786, z: 0.1643523}
