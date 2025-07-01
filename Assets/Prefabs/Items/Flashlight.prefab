@@ -128,6 +128,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6851769fa6b554f7d8a91ef9a6b7d29d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  onDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
   flickOnStart: 1
   minIntensity: 48
   flickerSpeed: 0.1
@@ -141,6 +147,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2488244677355174130}
+  - component: {fileID: 9174334416053394853}
   m_Layer: 0
   m_Name: Flashlight
   m_TagString: Untagged
@@ -162,9 +169,58 @@ Transform:
   m_Children:
   - {fileID: 3096279081504721322}
   - {fileID: 1430317309}
+  - {fileID: 7851029680885756149}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9174334416053394853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3009484225711874632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eefce4a5e9da494e812298105957067, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onStateChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7851029680885756146}
+        m_TargetAssemblyTypeName: Game.PlaySound, Assembly-CSharp
+        m_MethodName: PlayDefaultClip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  triggerInput:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Trigger Input
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 263a5289-c70b-424c-85a0-722c4d6139e8
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 299d335d-1a62-47fe-99fb-e4e58d3c3ef5
+        m_Path: <XRController>{RightHand}/{Trigger}
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Trigger Input
+        m_Flags: 0
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  lightFlicker: {fileID: 602575810051501544}
 --- !u!1 &6074826023437982353
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,7 +233,7 @@ GameObject:
   - component: {fileID: 157377734118338784}
   - component: {fileID: 3677932461021385844}
   m_Layer: 0
-  m_Name: default
+  m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -248,3 +304,95 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1001 &4978980767362216391
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2488244677355174130}
+    m_Modifications:
+    - target: {fileID: 3020949176606130482, guid: 9f738d3c0ed084fc4a22cbec1428c803,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020949176606130482, guid: 9f738d3c0ed084fc4a22cbec1428c803,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020949176606130482, guid: 9f738d3c0ed084fc4a22cbec1428c803,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020949176606130482, guid: 9f738d3c0ed084fc4a22cbec1428c803,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020949176606130482, guid: 9f738d3c0ed084fc4a22cbec1428c803,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020949176606130482, guid: 9f738d3c0ed084fc4a22cbec1428c803,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020949176606130482, guid: 9f738d3c0ed084fc4a22cbec1428c803,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020949176606130482, guid: 9f738d3c0ed084fc4a22cbec1428c803,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020949176606130482, guid: 9f738d3c0ed084fc4a22cbec1428c803,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020949176606130482, guid: 9f738d3c0ed084fc4a22cbec1428c803,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020949176606130482, guid: 9f738d3c0ed084fc4a22cbec1428c803,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020949176606130483, guid: 9f738d3c0ed084fc4a22cbec1428c803,
+        type: 3}
+      propertyPath: m_Name
+      value: '[Audio]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020949176606130484, guid: 9f738d3c0ed084fc4a22cbec1428c803,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c04fe4f019eb54348bd3ce267050c3e3, type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9f738d3c0ed084fc4a22cbec1428c803, type: 3}
+--- !u!114 &7851029680885756146 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3020949176606130485, guid: 9f738d3c0ed084fc4a22cbec1428c803,
+    type: 3}
+  m_PrefabInstance: {fileID: 4978980767362216391}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ddff67db393d4db982e2b95a844fdcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &7851029680885756149 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3020949176606130482, guid: 9f738d3c0ed084fc4a22cbec1428c803,
+    type: 3}
+  m_PrefabInstance: {fileID: 4978980767362216391}
+  m_PrefabAsset: {fileID: 0}

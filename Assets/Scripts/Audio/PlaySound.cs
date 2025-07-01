@@ -18,5 +18,12 @@ namespace Game
             
             _audioSource.PlayOneShot(clip);
         }
+        
+        public void PlayDefaultClip()
+        {
+            if (_audioSource.clip == null) return;
+            
+            _audioSource.Play();
+        }
     }
 }
