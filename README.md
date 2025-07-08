@@ -40,7 +40,6 @@
 ## 📺 Demo Video
 
 [![Watch on YouTube](https://img.shields.io/badge/Watch-YouTube-red?logo=youtube)](#)  
-*(#)*
 
 ---
 
