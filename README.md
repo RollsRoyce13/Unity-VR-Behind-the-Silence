@@ -10,7 +10,7 @@
 - **Hostpital Scene:** Find the source of the sound.
 - **Red Line Scene:** Carefully walk along the red lines to reach the exit.
 
-> *The Red Line Scene idea is inspired by **Alan Wake** & **Max Payne**.*
+> *The Project idea is inspired by **Alan Wake** & **Max Payne**.*
 
 ---
 
