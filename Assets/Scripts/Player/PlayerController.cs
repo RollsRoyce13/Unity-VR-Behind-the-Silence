@@ -14,15 +14,24 @@ namespace Game
         [SerializeField, Min(0f)] private float moveSpeed = 1.5f;
         
         private Rigidbody _rigidbody;
+        private Vector3 _initPosition;
         
         private void Awake()
         {
             _rigidbody = GetComponent<Rigidbody>();
+            _initPosition = transform.position;
         }
         
         private void FixedUpdate()
         {
             Move();
+        }
+
+        public void MoveToInitPosition()
+        {
+            _rigidbody.velocity = Vector3.zero;
+            _rigidbody.angularVelocity = Vector3.zero;
+            transform.position = _initPosition;
         }
 
         private void Move()

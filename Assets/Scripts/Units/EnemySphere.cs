@@ -4,7 +4,7 @@ using UnityEngine.Events;
 
 namespace Game
 {
-    [RequireComponent(typeof(MoveToPosition))]
+    [RequireComponent(typeof(TransformAnimation))]
     public class EnemySphere : MonoBehaviour
     {
         [Header("Events")]
@@ -21,16 +21,18 @@ namespace Game
         [Header("Settings")] 
         [SerializeField] private Vector3 firstDestination;
         [SerializeField] private Vector3 doorDestination;
+        [SerializeField] private Vector3 increaseScale;
         [SerializeField, Min(0f)] private float firstMoveDuration = 10f;
+        [SerializeField, Min(0f)] private float increaseScaleDuration = 10f;
         
-        private MoveToPosition _moveToPosition;
+        private TransformAnimation transformAnimation;
         private Tween _tween;
         
         private bool _isFirstActivated = true;
 
         private void Awake()
         {
-            _moveToPosition = GetComponent<MoveToPosition>();
+            transformAnimation = GetComponent<TransformAnimation>();
         }
 
         public void MoveToFirstPosition()
@@ -40,7 +42,7 @@ namespace Game
             ActivateObject();
             parallaxEffect.SetMaterial(blueMaterial);
             _isFirstActivated = false;
-            _moveToPosition.Move(firstDestination, firstMoveDuration);
+            transformAnimation.Move(firstDestination, firstMoveDuration);
             onFirstActivated?.Invoke();
         }
         
@@ -48,8 +50,14 @@ namespace Game
         {
             ActivateObject();
             parallaxEffect.SetMaterial(redMaterial);
-            _moveToPosition.Move(doorDestination, 0f);
+            transformAnimation.Move(doorDestination, 0f);
             onDoorActivated?.Invoke();
+        }
+        
+        public void IncreaseScale()
+        {
+            ActivateObject();
+            transformAnimation.IncreaseScale(increaseScale, increaseScaleDuration);
         }
 
         private void ActivateObject()
