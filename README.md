@@ -10,7 +10,7 @@
 - **Hostpital Scene:** Find the source of the sound.
 - **Red Line Scene:** Carefully walk along the red lines to reach the exit.
 
-> *The Red Line Scene idea is inspired by **Alan Wake** & **Max Payne**.*
+> *The Project idea is inspired by **Alan Wake** & **Max Payne**.*
 
 ---
 
@@ -35,13 +35,13 @@
   - 🎮 Haptic feedback
 - 🧪 Includes **XR Device Simulator** for easy in-editor testing.
 
----
+<!-- ---
 
 ## 📺 Demo Video
 
-[![Watch on YouTube](https://img.shields.io/badge/Watch-YouTube-red?logo=youtube)](#)  
+[![Watch on YouTube](https://img.shields.io/badge/Watch-YouTube-red?logo=youtube)](https://youtu.be/DgQFuYqHFBo)  
 
----
+--- -->
 
 ## 📌 Notes
 
