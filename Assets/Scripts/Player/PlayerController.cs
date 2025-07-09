@@ -54,7 +54,7 @@ namespace Game
         
         private IEnumerator PositionPlayerAtSpawn()
         {
-            yield return new WaitForSeconds(0.05f); // Wait for XR to initialize
+            yield return null; // Wait for XR to initialize
 
             Vector3 headOffset = GetHeadOffsetXZ();
             SetOriginPosition(headOffset);
