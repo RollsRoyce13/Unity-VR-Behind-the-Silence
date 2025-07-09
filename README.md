@@ -35,13 +35,13 @@
   - 🎮 Haptic feedback
 - 🧪 Includes **XR Device Simulator** for easy in-editor testing.
 
-<!-- ---
+---
 
 ## 📺 Demo Video
 
-[![Watch on YouTube](https://img.shields.io/badge/Watch-YouTube-red?logo=youtube)](https://youtu.be/DgQFuYqHFBo)  
+[![Watch on YouTube](https://img.shields.io/badge/Watch-YouTube-red?logo=youtube)](https://youtu.be/dTa-LtFz-SU)
 
---- -->
+---
 
 ## 📌 Notes
 
