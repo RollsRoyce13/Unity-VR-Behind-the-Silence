@@ -1,32 +1,36 @@
-using System.Collections.Generic;
+using System;
+using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.XR;
-using UnityEngine.XR.Management;
 
 namespace Game
 {
+    [RequireComponent(typeof(XROrigin))]
     [RequireComponent(typeof(Rigidbody))]
     public class PlayerController : MonoBehaviour
     {
-        [Header("References")]
+        [Header("References")] 
         [SerializeField] private InputActionProperty moveAction; 
         [SerializeField] private Transform cameraTransform;
         
         [Header("Settings")]
         [SerializeField, Min(0f)] private float moveSpeed = 1.5f;
-        
+
+        private XROrigin _xrOrigin;
         private Rigidbody _rigidbody;
         private Vector3 _initPosition;
         
         private void Awake()
         {
+            _xrOrigin = GetComponent<XROrigin>();
             _rigidbody = GetComponent<Rigidbody>();
-            _initPosition = transform.position;
-
-            ResetDevicePosition();
         }
-        
+
+        private void Start()
+        {
+            Initialization();
+        }
+
         private void FixedUpdate()
         {
             Move();
@@ -39,16 +43,12 @@ namespace Game
             transform.position = _initPosition;
         }
 
-        private void ResetDevicePosition()
+        private void Initialization()
         {
-            List<XRInputSubsystem> inputSubsystems = new List<XRInputSubsystem>();
-            SubsystemManager.GetInstances(inputSubsystems);
-
-            foreach (var subsystem in inputSubsystems)
-            {
-                subsystem.TryRecenter();
-                Debug.Log("Recenter called on: " + subsystem.SubsystemDescriptor.id);
-            }
+            // _xrOrigin.MoveCameraToWorldLocation(Vector3.zero);
+            // _xrOrigin.MatchOriginUpCameraForward(Vector3.up, Vector3.forward);
+            //
+            // _initPosition = transform.position;
         }
 
         private void Move()
