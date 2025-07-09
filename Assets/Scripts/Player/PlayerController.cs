@@ -1,5 +1,8 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.XR;
+using UnityEngine.XR.Management;
 
 namespace Game
 {
@@ -20,6 +23,8 @@ namespace Game
         {
             _rigidbody = GetComponent<Rigidbody>();
             _initPosition = transform.position;
+
+            ResetDevicePosition();
         }
         
         private void FixedUpdate()
@@ -32,6 +37,18 @@ namespace Game
             _rigidbody.velocity = Vector3.zero;
             _rigidbody.angularVelocity = Vector3.zero;
             transform.position = _initPosition;
+        }
+
+        private void ResetDevicePosition()
+        {
+            List<XRInputSubsystem> inputSubsystems = new List<XRInputSubsystem>();
+            SubsystemManager.GetInstances(inputSubsystems);
+
+            foreach (var subsystem in inputSubsystems)
+            {
+                subsystem.TryRecenter();
+                Debug.Log("Recenter called on: " + subsystem.SubsystemDescriptor.id);
+            }
         }
 
         private void Move()

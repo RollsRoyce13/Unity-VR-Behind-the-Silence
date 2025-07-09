@@ -46,10 +46,10 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 0.95, b: 0.8, a: 1}
-  m_Intensity: 50
-  m_Range: 6
-  m_SpotAngle: 30.000002
-  m_InnerSpotAngle: 7.136805
+  m_Intensity: 6
+  m_Range: 8
+  m_SpotAngle: 35
+  m_InnerSpotAngle: 15
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -135,7 +135,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   flickOnStart: 1
-  minIntensity: 48
+  minIntensity: 5.8
   flickerSpeed: 0.1
   flickerDuration: 1
 --- !u!1 &3009484225711874632

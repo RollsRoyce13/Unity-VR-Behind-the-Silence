@@ -19,13 +19,13 @@ namespace Game
 
         private void OnEnable()
         {
-            triggerInput.action.performed += OnTriggerPressed;
+            triggerInput.action.started += OnTriggerPressed;
             triggerInput.action.Enable();
         }
 
         private void OnDisable()
         {
-            triggerInput.action.performed -= OnTriggerPressed;
+            triggerInput.action.started -= OnTriggerPressed;
             triggerInput.action.Disable();
         }
 
